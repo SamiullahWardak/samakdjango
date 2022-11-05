@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hello Samak, about</h1>
+    <p>This is our tamplate/about.html</p>
+
+    <h3>capfirst... {{ my_text|capfirst }}</h3>
+    <h3>upper... {{ my_text|upper }}</h3>
+    <h3>title... {{ my_text|title }}</h3>
+    {{ my_html }}
+    {{ my_html|safe }}
+    {{ my_html|striptags }}
+</br>
+    {{ my_html|slugify }}
+    
+<ul>
+{% for item in my_list %}
+    {% if item < 15 %}
+    <li>{{ item|add:20 }}</li>
+    {% elif item == 'sam' %}
+    <li>This is not the network</li>
+    {% else %}
+    <li>{{ item }}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+
+{% endblock %}

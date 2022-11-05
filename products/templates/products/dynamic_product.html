@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>In App template</h1>
+<hr/>
+<h1>Title: {{ obj.title }}</h1>
+<h3>Description: {{ obj.description }}
+    <h1>Price: ${{ obj.price }}</h1>
+    <h1>Customer name: {{ obj.myName }}</h1> <hr/>
+
+{% endblock content %}

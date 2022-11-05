@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>In App template</h1>
+<hr/>
+{% for obj in object %}
+<h1>Title: {{obj.title}}</h1>
+<h3>Description: {% if object.description != '' %}
+    {{obj.description}}
+    {% else %}
+    Comming soon
+    {% endif %}</h3>
+    <h1>Price: ${{obj.price}}</h1>
+    <h1>Customer name: {{obj.myName}}</h1> <hr/>
+{% endfor %}
+
+{% endblock content %}
+

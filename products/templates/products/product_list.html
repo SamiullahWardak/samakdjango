@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for oneItem in querySet %}
+<h5>{{ oneItem.id }} - <a href='/product/{{ oneItem.id }}/'> {{ oneItem.title }}</a></h5>
+{% endfor %}
+
+{% endblock content %}
